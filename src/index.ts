@@ -1,5 +1,5 @@
-import { EngineConfig } from "apollo-engine";
-import { compose, log } from "../";
+import { EngineConfig } from 'apollo-engine';
+import { compose, log } from "jokio";
 import { yoga, YogaProps, yogaStart } from "./yoga";
 import { apolloEngine } from "./apollo-engine";
 import { Context } from "./context";
@@ -20,10 +20,14 @@ const defaultGraphqlProps: GraphqlProps = {
 export function graphql(props: GraphqlProps) {
 	props = merge(defaultGraphqlProps, props)
 
+	const graphiqlProcess = props.playground
+		? state => state
+		: graphiql(props.endpoint, props.graphiql)
+
 	return compose(
 		yoga(props),
 		apolloEngine(props.engine),
-		graphiql(props.endpoint, props.graphiql),
+		graphiqlProcess,
 		yogaStart(props),
 	)
 }

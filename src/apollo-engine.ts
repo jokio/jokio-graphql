@@ -1,5 +1,5 @@
 import { EngineConfig as ApolloEngineProps, Engine } from 'apollo-engine'
-import { Context } from "./context"
+import { Context } from './context'
 
 export const apolloEngine = (props: ApolloEngineProps) => (state, context: Context) => {
 

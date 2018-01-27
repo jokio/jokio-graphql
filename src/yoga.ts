@@ -1,4 +1,5 @@
 import { merge } from 'lodash';
+import { Request } from 'express';
 import { Options, GraphQLServer, PubSub } from 'graphql-yoga';
 import { GraphQLSchema } from 'graphql';
 import { mergeSchemas } from 'graphql-tools';
@@ -119,7 +120,6 @@ export const yoga = (props: YogaProps) => async (state, context: Context) => {
 export const yogaStart = (props: YogaProps) => async (state, context: Context) => {
 	const { yogaServer: server, connectionContextFn } = context;
 
-	console.log(props.subscriptions)
 	await context.yogaServer.start(props)
 
 	// hack

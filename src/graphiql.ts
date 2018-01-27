@@ -1,5 +1,5 @@
-import { Context } from "./context";
 import { graphiqlExpress } from 'apollo-server-express';
+import { Context } from './context';
 
 
 export const graphiql = (endpoint, props: GraphiqlProps) => (state, context: Context) => {
