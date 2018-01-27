@@ -24,7 +24,7 @@ High level package built on top of [graphql-yoga](https://github.com/graphcool/g
 import { run } from 'jokio'
 import { graphql, LocalSchema } from 'jokio-graphql';
 
-const schema: LocalSchema<any> = {
+const schema: LocalSchema = {
   typeDefs: `
     extend type Query {
       hello: String
