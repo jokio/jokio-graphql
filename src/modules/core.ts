@@ -1,6 +1,7 @@
 import { PubSub } from "graphql-subscriptions/dist/pubsub";
 import { clearInterval } from "timers";
-import { Resolvers, Context } from "../types";
+import { Resolvers } from "../types";
+import { Context } from "../context";
 
 export const SYSTEM_INFO_EVENT = 'SystemInfoEvent';
 

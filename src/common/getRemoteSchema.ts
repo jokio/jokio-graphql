@@ -1,6 +1,6 @@
 import { GraphQLSchema } from "graphql";
 import { mergeSchemas, introspectSchema, makeRemoteExecutableSchema } from 'graphql-tools';
-import { HttpLink } from 'apollo-link-http';
+import { HttpLink } from './link-http';
 import fetch from 'node-fetch';
 
 
