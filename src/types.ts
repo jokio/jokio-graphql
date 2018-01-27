@@ -1,5 +1,5 @@
 
-export interface LocalSchema<ContextType> {
+export interface LocalSchema<ContextType = any> {
 	typeDefs: string
 	resolvers: Resolvers<ContextType>
 }
