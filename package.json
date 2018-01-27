@@ -11,7 +11,9 @@
 		"build": "tsc",
 		"deploy": "tsc && npm publish"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"jokio": "^0.2.0"
+	},
 	"devDependencies": {
 		"@types/jest": "22.1.0",
 		"jest": "22.1.4",

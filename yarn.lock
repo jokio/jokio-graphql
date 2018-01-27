@@ -2088,6 +2088,12 @@ jest@22.1.4:
   dependencies:
     jest-cli "^22.1.4"
 
+jokio@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/jokio/-/jokio-0.2.0.tgz#d70b97cc4d177d921a3d097d33512df677796350"
+  dependencies:
+    uuid "3.2.1"
+
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
@@ -3634,7 +3640,7 @@ util.promisify@^1.0.0:
     define-properties "^1.1.2"
     object.getownpropertydescriptors "^2.0.3"
 
-uuid@^3.0.0, uuid@^3.1.0:
+uuid@3.2.1, uuid@^3.0.0, uuid@^3.1.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.2.1.tgz#12c528bb9d58d0b9265d9a2f6f0fe8be17ff1f14"
 

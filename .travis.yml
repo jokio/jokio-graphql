@@ -13,3 +13,12 @@ before_script:
 
 script:
 - tsc
+
+deploy:
+  provider: npm
+  email: ez@jok.io
+  skip_cleanup: true
+  api_key:
+    secure: w5PUZLTWYdt1nlr/qpvNzi+95pPxg0kNe6Y4Xhdl6QgeE9MzIj6l5kxnz0O5NIlv+/RtY/Qxk4RG5rO04AIZFU2eKg/X0DYeBvciW1ZbiI8FjDKHjO3sbbFVqXRy2KTHVItb9HqX+nn/okYotNZtPZJgChD6SkKejJ3F9VrB6pPU1q61PR8D87N2nPSic/RAUDkemO7STOt4MSWBOoMcKmKcsZCeoGXgcMI4v5IYb1Jvh1+3HfS00essHkdzT2eeJUwT0++YTxusxx7kbC8aGwPV9lobty32x8uKInnQ7dtPJdYHyh8G7h9KR+D+2D5aQuKgU9COUEoVhS5nIQOfNQZvmuptfVae8l9OT57N+l6wpzZNxltBL+0JRbcTh/YVqS0XP+0qKfnqrQgFiQLCQXwb8luvcgy0ftGN6NICdpZjKeds6NdvJj0dzG+bmyUfLIs29H7b9o1q5dlgM242reOsGrttLFy+o+goPtQ0gemHohOzWMUaEAUoMvbLMFDmSowEyXXjXmPQszvqTLHph/hYZHH6lWKXFpYfIOIiGvqKXMxdr/PQvlpcQCgd4Y07AntB7aAI0r+GiEz1uyv34fXVF5gEL+cvVFGRin62bPjVk5zkZWBIjEcdifp6i5vErUWSAg2BGMFmaY++0pDJIbQovJ9gaukyxROoV8R/fKA=
+  on:
+    repo: jokio/jokio-graphql
