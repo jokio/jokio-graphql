@@ -49,6 +49,9 @@ export const resolvers: Resolvers<Context> = {
 		startRealtimeServerInfo: (obj, { interval = 1000 }, { pubsub }) => {
 			clearInterval(realtimeServerInfoHandler);
 
+			interval = Math.max(100, interval);
+			interval = Math.min(1000, interval);
+
 			realtimeServerInfoHandler = setInterval(
 				async () =>
 					pubsub.publish(SYSTEM_INFO_EVENT, {
