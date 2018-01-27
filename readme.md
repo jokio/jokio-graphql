@@ -1,4 +1,5 @@
-# jokio-graphql
+# GraphQL Server (with jokio)
+[![Build Status](https://travis-ci.org/jokio/jokio-graphql.svg?branch=master)](https://travis-ci.org/jokio/jokio-graphql)
 
 Example:
 ```js
