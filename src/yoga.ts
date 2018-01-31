@@ -20,7 +20,7 @@ const defaultProps: YogaProps = {
 	autoStart: false,
 	localSchemas: [],
 	remoteSchemaUrls: [],
-	restApiUrls: [],
+	restApiUrls: {},
 }
 
 
