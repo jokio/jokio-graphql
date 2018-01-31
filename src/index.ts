@@ -37,4 +37,5 @@ export interface GraphqlProps extends YogaProps {
 	graphiql?: GraphiqlProps
 }
 
-export { LocalSchema } from './types'
+export { LocalSchema, Resolvers, Resolver } from './types'
+export { Context } from './context'
