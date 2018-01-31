@@ -17,17 +17,20 @@ import { getRemoteSchema } from './common/getRemoteSchema';
 const defaultProps: YogaProps = {
 	tracing: { mode: 'http-header' },
 	playground: false,
-	autoStart: false
+	autoStart: false,
+	localSchemas: [],
+	remoteSchemaUrls: [],
+	restApiUrls: [],
 }
 
 
 export const yoga = (props: YogaProps) => async (state, context: Context) => {
 
 	const {
-		localSchemas = [],
-		remoteSchemaUrls = [],
-		restApiUrls = [],
-		autoStart = false,
+		localSchemas,
+		remoteSchemaUrls,
+		restApiUrls,
+		autoStart,
 		disableCoreModule,
 		disabledScalars,
 
