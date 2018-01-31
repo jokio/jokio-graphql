@@ -1,6 +1,6 @@
 {
 	"name": "jokio-graphql",
-	"version": "0.2.4",
+	"version": "0.2.5",
 	"description": "graphql middleware for jokio",
 	"main": "dist/index.js",
 	"types": "dist/index.d.js",

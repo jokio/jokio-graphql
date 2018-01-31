@@ -8,7 +8,7 @@ import { merge } from "lodash";
 
 
 const defaultGraphqlProps: GraphqlProps = {
-	port: 3000,
+	port: parseInt(process.env.PORT) || 3000,
 	endpoint: '/graphql',
 	subscriptions: '/graphql',
 	playground: false,
