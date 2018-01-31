@@ -39,3 +39,4 @@ export interface GraphqlProps extends YogaProps {
 
 export { LocalSchema, Resolvers, Resolver } from './types'
 export { Context } from './context'
+export { RestAPI } from './common/restApi'
