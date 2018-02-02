@@ -6,6 +6,8 @@ export class RestAPI {
 
 	constructor(
 		private baseUrl,
+		private httpHeaders = {},
+		private responseType = 'json',
 		private timeout = 10 * 1000
 	) { }
 
@@ -40,8 +42,8 @@ export class RestAPI {
 		return axios.create({
 			baseURL: this.baseUrl,
 			timeout: this.timeout,
-			headers: {},
-			responseType: 'json',
+			headers: this.httpHeaders,
+			responseType: this.responseType,
 		});
 	}
 }
