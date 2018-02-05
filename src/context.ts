@@ -5,7 +5,13 @@ import { Engine } from 'apollo-engine'
 export interface Context {
 	yogaServer: GraphQLServer
 	pubsub: PubSub
+	token: string
 	engine: Engine
-	express: Express.Application
 	connectionContextFn: any
+}
+
+export interface GraphqlContext {
+	pubsub: PubSub
+	token: string
+	userId?: any
 }

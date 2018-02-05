@@ -5,7 +5,7 @@ export interface LocalSchema<ContextType = any> {
 }
 
 export interface Resolvers<ContextType> {
-	[key: string]: any | Resolver<ContextType> | SubscriptionResolver<ContextType>
+	[key: string]: Resolver<ContextType> | SubscriptionResolver<ContextType>
 }
 
 export interface Resolver<ContextType> {
