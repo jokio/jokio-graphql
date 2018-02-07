@@ -37,6 +37,7 @@ export interface GraphqlProps extends YogaProps {
 	graphiql?: GraphiqlProps
 }
 
+export { getHttpToken, getWsToken } from './common/auth'
 export { LocalSchema, Resolvers, Resolver } from './types'
 export { Context, GraphContext } from './context'
 export { RestAPI } from './common/restApi'

@@ -12,6 +12,7 @@ import { LocalSchema } from './types';
 import { Context, GraphContext } from "./context";
 import { RestAPI } from './common/restApi';
 import { getRemoteSchema } from './common/getRemoteSchema';
+import * as auth from './common/auth';
 
 
 const defaultProps: YogaProps = {
@@ -21,6 +22,11 @@ const defaultProps: YogaProps = {
 	localSchemas: [],
 	remoteSchemaUrls: [],
 	restApiUrls: {},
+	authentication: {
+		tokenName: 'token',
+		getHttpToken: auth.getHttpToken,
+		getWsToken: auth.getWsToken,
+	}
 }
 
 
