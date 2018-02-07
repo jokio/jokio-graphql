@@ -10,7 +10,7 @@ export interface Context {
 	connectionContextFn: any
 }
 
-export interface GraphqlContext {
+export interface GraphContext {
 	pubsub: PubSub
 	token: string
 	userId?: any

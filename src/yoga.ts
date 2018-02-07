@@ -9,7 +9,7 @@ import { ConnectionContext } from 'subscriptions-transport-ws';
 import coreModule from './modules/core';
 import scalarModule from './modules/scalars';
 import { LocalSchema } from './types';
-import { Context, GraphqlContext } from "./context";
+import { Context, GraphContext } from "./context";
 import { RestAPI } from './common/restApi';
 import { getRemoteSchema } from './common/getRemoteSchema';
 
@@ -70,7 +70,7 @@ export const yoga = (props: YogaProps) => async (state, context: Context) => {
 
 
 	const pubsub = new PubSub();
-	const connectionContextFn = async ({ request, connectionParams }): Promise<GraphqlContext> => {
+	const connectionContextFn = async ({ request, connectionParams }): Promise<GraphContext> => {
 		let token = null;
 		let userId = null;
 
@@ -105,7 +105,7 @@ export const yoga = (props: YogaProps) => async (state, context: Context) => {
 		schema,
 		typeDefs,
 		resolvers,
-		context
+		context: connectionContextFn
 	})
 
 	if (autoStart) {
