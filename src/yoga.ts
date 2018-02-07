@@ -156,9 +156,9 @@ export interface YogaProps extends Options {
 }
 
 export interface Authentication {
-	tokenName: string
-	getHttpToken: (request: Request, tokenName: string) => string
-	getWsToken: (connection: ConnectionContext, tokenName: string) => string
+	tokenName?: string
+	getHttpToken?: (request: Request, tokenName: string) => string
+	getWsToken?: (connection: ConnectionContext, tokenName: string) => string
 	getUserId?: (token: string, restApis: { [key: string]: RestAPI }) => number
 }
 
