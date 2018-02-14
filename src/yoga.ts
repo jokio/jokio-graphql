@@ -1,9 +1,9 @@
 import { merge } from 'lodash';
 import { Request } from 'express';
-import { Options, GraphQLServer, PubSub } from 'graphql-yoga';
+import { Options, GraphQLServer, PubSub } from '@jokio/graphql-yoga';
 import { GraphQLSchema } from 'graphql';
 import { mergeSchemas } from 'graphql-tools';
-import { IResolvers } from 'graphql-yoga/dist/src/types';
+import { IResolvers } from '@jokio/graphql-yoga/dist/src/types';
 import { ConnectionContext } from 'subscriptions-transport-ws';
 
 import coreModule from './modules/core';

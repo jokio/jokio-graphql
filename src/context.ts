@@ -1,4 +1,4 @@
-import { GraphQLServer, PubSub } from 'graphql-yoga';
+import { GraphQLServer, PubSub } from '@jokio/graphql-yoga';
 import { Engine } from 'apollo-engine'
 
 
