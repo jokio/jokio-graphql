@@ -16,7 +16,6 @@ import * as auth from './common/auth';
 
 
 const defaultProps: YogaProps = {
-	tracing: { mode: 'http-header' },
 	playground: false,
 	autoStart: false,
 	localSchemas: [],

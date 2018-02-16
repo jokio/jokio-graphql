@@ -11,6 +11,7 @@ const defaultGraphqlProps: GraphqlProps = {
 	port: parseInt(process.env.PORT) || 3000,
 	endpoint: '/graphql',
 	subscriptions: '/graphql',
+	tracing: { mode: 'http-header' },
 	playground: false,
 	graphiql: {
 		subscriptionEndpoint: 'ws://localhost:3000/graphql'
@@ -26,7 +27,7 @@ export function graphql(props: GraphqlProps) {
 
 	return compose(
 		yoga(props),
-		apolloEngine(props.engine),
+		apolloEngine(props),
 		graphiqlProcess,
 		yogaStart(props),
 	)
