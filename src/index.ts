@@ -25,8 +25,13 @@ export function graphql(props: GraphqlProps) {
 		? state => state
 		: graphiql(props.endpoint, props.graphiql)
 
+	const replaceExpress = (express) => (state, context: Context) => {
+		context.yogaServer.express = express || context.yogaServer.express
+	}
+
 	return compose(
 		yoga(props),
+		replaceExpress(props.express),
 		apolloEngine(props),
 		graphiqlProcess,
 		yogaStart(props),
@@ -36,6 +41,7 @@ export function graphql(props: GraphqlProps) {
 export interface GraphqlProps extends YogaProps {
 	engine?: EngineConfig
 	graphiql?: GraphiqlProps
+	express?: Express.Application
 }
 
 export { getHttpToken, getWsToken } from './common/auth'
