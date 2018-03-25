@@ -27,6 +27,7 @@ export function graphql(props: GraphqlProps) {
 
 	const replaceExpress = (express) => (state, context: Context) => {
 		context.yogaServer.express = express || context.yogaServer.express
+		return state
 	}
 
 	return compose(
