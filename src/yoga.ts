@@ -1,9 +1,9 @@
 import { merge } from 'lodash';
 import { Request } from 'express';
-import { Options, GraphQLServer, PubSub } from '@jokio/graphql-yoga';
+import { Options, GraphQLServer, PubSub } from 'graphql-yoga';
 import { GraphQLSchema } from 'graphql';
 import { mergeSchemas } from 'graphql-tools';
-import { IResolvers } from '@jokio/graphql-yoga/dist/src/types';
+import { IResolvers } from 'graphql-yoga/dist/src/types';
 import { ConnectionContext } from 'subscriptions-transport-ws';
 
 import coreModule from './modules/core';
@@ -127,7 +127,7 @@ export const yoga = (props: YogaProps) => async (state, context: Context) => {
 export const yogaStart = (props: YogaProps) => async (state, context: Context) => {
 	const { yogaServer: server, connectionContextFn } = context;
 
-	await context.yogaServer.start(props)
+	await server.start(props)
 
 	// hack
 	const subscriptionServer: any = server.subscriptionServer;
