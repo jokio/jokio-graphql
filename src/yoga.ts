@@ -127,7 +127,7 @@ export const yoga = (props: YogaProps) => async (state, context: Context) => {
 export const yogaStart = (props: YogaProps) => async (state, context: Context) => {
 	const { yogaServer: server, connectionContextFn } = context;
 
-	await server.start(props)
+	context.server = await server.start(props)
 
 	// hack
 	const subscriptionServer: any = server.subscriptionServer;
