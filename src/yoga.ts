@@ -131,9 +131,11 @@ export const yogaStart = (props: YogaProps) => async (state, context: Context) =
 
 	// hack
 	const subscriptionServer: any = server.subscriptionServer;
-	subscriptionServer.onOperation = null;
-	subscriptionServer.onConnect = async (connectionParams) =>
-		await connectionContextFn({ connectionParams, request: null });
+	if (subscriptionServer) {
+		subscriptionServer.onOperation = null;
+		subscriptionServer.onConnect = async (connectionParams) =>
+			await connectionContextFn({ connectionParams, request: null });
+	}
 	// hack
 
 	return state
