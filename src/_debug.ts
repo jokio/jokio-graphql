@@ -10,11 +10,13 @@ const schema: LocalSchema = {
 	typeDefs: `
 		extend type Query {
 			hello: String
+			omg: String
 		}
 	`,
 	resolvers: {
 		Query: {
-			hello: () => 'world'
+			hello: () => 'world',
+			omg: () => ''
 		}
 	}
 }
@@ -24,5 +26,6 @@ run(
 		port: 3333,
 		localSchemas: [schema],
 		express: app,
+		mocks: true,
 	})
 )

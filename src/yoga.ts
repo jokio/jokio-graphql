@@ -3,7 +3,6 @@ import { Request } from 'express';
 import { Options, GraphQLServer, PubSub } from 'graphql-yoga';
 import { GraphQLSchema } from 'graphql';
 import { mergeSchemas } from 'graphql-tools';
-import { IResolvers } from 'graphql-yoga/dist/src/types';
 import { ConnectionContext } from 'subscriptions-transport-ws';
 
 import coreModule from './modules/core';
@@ -38,6 +37,7 @@ export const yoga = (props: YogaProps) => async (state, context: Context) => {
 		autoStart,
 		disableCoreModule,
 		disabledScalars,
+		mocks,
 
 		authentication,
 		contextObject,
@@ -110,6 +110,7 @@ export const yoga = (props: YogaProps) => async (state, context: Context) => {
 		schema,
 		typeDefs,
 		resolvers,
+		mocks,
 		context: connectionContextFn
 	})
 
@@ -148,6 +149,7 @@ export interface YogaProps extends Options {
 	remoteSchemaUrls?: string[]
 	restApiUrls?: { [key: string]: string }
 	autoStart?: boolean
+	mocks?: Object | boolean
 
 	disableCoreModule?: boolean
 	disabledScalars?: boolean

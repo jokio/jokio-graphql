@@ -15,17 +15,17 @@ export const apolloEngine = (props: GraphqlProps) => (state, context: Context) =
 	const { express } = yogaServer
 	const { engine: engineConfig, endpoint, port: graphqlPort } = props
 
-	const engine = new Engine({
-		engineConfig,
-		endpoint,
-		graphqlPort,
-	})
-	engine.start();
+	// const engine = new Engine({
+	// 	engineConfig,
+	// 	endpoint,
+	// 	graphqlPort,
+	// })
+	// engine.start();
 
 
-	express.use(engine.expressMiddleware());
+	// express.use(engine.expressMiddleware());
 
-	context.engine = engine
+	// context.engine = engine
 
 	return state;
 }
